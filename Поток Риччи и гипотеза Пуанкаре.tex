@@ -3,8 +3,18 @@
 \usepackage[T2A]{fontenc}   % Кодировка для кириллицы
 \usepackage[russian]{babel} % Поддержка русского языка
 \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{tocloft} % Для настройки оглавления
 
+% Убираем точки для всех уровней содержания
+\renewcommand{\cftsecleader}{\cftdotfill{\cftnodots}} % Для разделов
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftnodots}} % Для подразделов (если есть)
+
+% Настраиваем нумерацию в содержании
 \renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesection}{Глава \arabic{section}.}
+\renewcommand{\cftsecaftersnum}{ }
+\cftsetindents{section}{0em}{5.0em}
+
 \begin{document}
 
 \begin{center}
