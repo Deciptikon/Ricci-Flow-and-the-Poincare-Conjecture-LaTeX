@@ -1,5 +1,9 @@
 \documentclass{article}
 \usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[labelfont=normalfont, labelsep=period]{caption}
 \usepackage[utf8]{inputenc} % Кодировка UTF-8
 \usepackage[T2A]{fontenc}   % Кодировка для кириллицы
 \usepackage[russian]{babel} % Поддержка русского языка
@@ -44,6 +48,14 @@
 
 \theoremstyle{theoremstyle}
 \newtheorem*{myproof}{Доказательство}
+
+
+% Настройка для отображения "Рисунок" с маленькими заглавными буквами
+\DeclareCaptionLabelFormat{custom}{\textsc{Рисунок}\ \thefigure}
+\captionsetup[figure]{labelformat=custom}
+
+
+
 
 \begin{document}
 
